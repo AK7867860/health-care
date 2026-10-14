@@ -11,9 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as CustomerDashboardRouteImport } from './routes/customer.dashboard'
 import { Route as ServiceIdRouteImport } from './routes/service.$id'
 
 const IndexRoute = IndexRouteImport.update({
@@ -26,9 +29,19 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -41,6 +54,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CustomerDashboardRoute = CustomerDashboardRouteImport.update({
+  id: '/customer/dashboard',
+  path: '/customer/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceIdRoute = ServiceIdRouteImport.update({
   id: '/service/$id',
   path: '/service/$id',
@@ -50,50 +68,82 @@ const ServiceIdRoute = ServiceIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/customer/dashboard': typeof CustomerDashboardRoute
   '/service/$id': typeof ServiceIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/customer/dashboard': typeof CustomerDashboardRoute
   '/service/$id': typeof ServiceIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
   '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/customer/dashboard': typeof CustomerDashboardRoute
   '/service/$id': typeof ServiceIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/auth' | '/contact' | '/services' | '/service/$id'
+    | '/'
+    | '/about'
+    | '/admin'
+    | '/auth'
+    | '/checkout'
+    | '/contact'
+    | '/services'
+    | '/customer/dashboard'
+    | '/service/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/auth' | '/contact' | '/services' | '/service/$id'
+  to:
+    | '/'
+    | '/about'
+    | '/admin'
+    | '/auth'
+    | '/checkout'
+    | '/contact'
+    | '/services'
+    | '/customer/dashboard'
+    | '/service/$id'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/admin'
     | '/auth'
+    | '/checkout'
     | '/contact'
     | '/services'
+    | '/customer/dashboard'
     | '/service/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AdminRoute: typeof AdminRoute
   AuthRoute: typeof AuthRoute
+  CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
+  CustomerDashboardRoute: typeof CustomerDashboardRoute
   ServiceIdRoute: typeof ServiceIdRoute
 }
 
@@ -113,11 +163,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -134,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/customer/dashboard': {
+      id: '/customer/dashboard'
+      path: '/customer/dashboard'
+      fullPath: '/customer/dashboard'
+      preLoaderRoute: typeof CustomerDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service/$id': {
       id: '/service/$id'
       path: '/service/$id'
@@ -147,9 +218,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AdminRoute: AdminRoute,
   AuthRoute: AuthRoute,
+  CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
+  CustomerDashboardRoute: CustomerDashboardRoute,
   ServiceIdRoute: ServiceIdRoute,
 }
 export const routeTree = rootRouteImport
