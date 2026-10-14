@@ -7,8 +7,8 @@ import { CreditCard, Lock, ShieldCheck, Timer, Video } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/checkout")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    service: typeof search.service === "string" ? search.service : services[0].slug,
+  validateSearch: (search: Record<string, unknown>): { service: string } => ({
+    service: typeof search["service"] === "string" ? (search["service"] as string) : services[0].slug,
   }),
   head: () => ({
     meta: [
