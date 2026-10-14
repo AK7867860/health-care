@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export const Route = createFileRoute("/checkout")({
   validateSearch: (search: Record<string, unknown>): { service: string } => ({
-    service: typeof search["service"] === "string" ? (search["service"] as string) : services[0].slug,
+    service: typeof search["service"] === "string" ? (search["service"] as string) : defaultService.slug,
   }),
   head: () => ({
     meta: [
@@ -23,9 +23,11 @@ export const Route = createFileRoute("/checkout")({
   component: Checkout,
 });
 
+const defaultService = services[0]!;
+
 function Checkout() {
   const { service: slug } = Route.useSearch();
-  const service = getService(slug) ?? services[0];
+  const service = getService(slug) ?? defaultService;
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [paid, setPaid] = useState(false);
 
