@@ -1,9 +1,9 @@
 # Roadmap
 
 Current request:
-- [ ] Rename the app to Health Care across visible text and page metadata.
-- [ ] Use “Your consultation, one step away” and remove doctor/name references.
-- [ ] Add relevant images to every service card and verify desktop/mobile display.
+- [x] Rename the app to Health Care across visible text and page metadata.
+- [x] Use “Your consultation, one step away” and remove doctor/name references.
+- [x] Add relevant images to every service card and verify desktop/mobile display.
 
 All done:
 - [x] Design system: Modern Medical tokens (navy/green, Sora/Manrope)
