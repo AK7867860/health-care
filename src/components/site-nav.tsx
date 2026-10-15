@@ -19,7 +19,7 @@ export function SiteNav() {
             <Stethoscope className="h-5 w-5" />
           </span>
           <span className="font-display text-lg font-bold tracking-tight text-foreground">
-            Sehaty<span className="text-accent">.</span>
+            Health Care<span className="text-accent">.</span>
           </span>
         </Link>
 
