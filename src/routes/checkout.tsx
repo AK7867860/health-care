@@ -29,6 +29,7 @@ function Checkout() {
   const { service: slug } = Route.useSearch();
   const service = getService(slug) ?? defaultService;
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
+  const [paymentMethod, setPaymentMethod] = useState("mada");
   const [paid, setPaid] = useState(false);
 
   if (paid) {
@@ -107,9 +108,16 @@ function Checkout() {
                 data is stored on this site.
               </p>
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {["mada", "Visa", "Mastercard"].map((m, i) => (
-                  <label key={m} className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-sm font-bold ${i === 0 ? "border-accent bg-mint" : "border-border"}`}>
-                    <input type="radio" name="pay" defaultChecked={i === 0} className="sr-only" />
+                {["mada", "Visa", "Mastercard"].map((m) => (
+                  <label key={m} className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-sm font-bold transition-colors ${paymentMethod === m ? "border-accent bg-mint ring-2 ring-accent/30" : "border-border hover:border-accent"}`}>
+                    <input
+                      type="radio"
+                      name="pay"
+                      value={m}
+                      checked={paymentMethod === m}
+                      onChange={() => setPaymentMethod(m)}
+                      className="sr-only"
+                    />
                     <CreditCard className="h-4 w-4 text-accent" /> {m}
                   </label>
                 ))}
