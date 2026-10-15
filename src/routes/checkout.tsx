@@ -29,6 +29,7 @@ function Checkout() {
   const { service: slug } = Route.useSearch();
   const service = getService(slug) ?? defaultService;
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
+  const [paymentMethod, setPaymentMethod] = useState("mada");
   const [paid, setPaid] = useState(false);
 
   if (paid) {
