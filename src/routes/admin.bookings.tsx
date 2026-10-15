@@ -7,9 +7,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/admin/bookings")({
   head: () => ({
     meta: [
-      { title: "Bookings — Sehaty Admin" },
+      { title: "Bookings — Health Care Admin" },
       { name: "description", content: "View and manage patient bookings, revenue, and export CSV reports." },
-      { property: "og:title", content: "Bookings — Sehaty Admin" },
+      { property: "og:title", content: "Bookings — Health Care Admin" },
       { property: "og:description", content: "Admin booking management." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -28,7 +28,7 @@ function exportCsv() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "sehaty-bookings-october-2026.csv";
+  a.download = "health-care-bookings-october-2026.csv";
   a.click();
   URL.revokeObjectURL(url);
 }

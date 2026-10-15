@@ -11,7 +11,7 @@ export function SiteFooter() {
               <Stethoscope className="h-5 w-5" />
             </span>
             <span className="font-display text-lg font-bold">
-              Sehaty<span className="text-accent">.</span>
+              Health Care<span className="text-accent">.</span>
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-sidebar-foreground/70">
@@ -36,14 +36,14 @@ export function SiteFooter() {
             Contact
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm text-sidebar-foreground/80">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> care@sehaty.example</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> care@health-care.example</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> +966 5X XXX XXXX</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-accent" /> Riyadh, Saudi Arabia</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-sidebar-border py-5 text-center text-xs text-sidebar-foreground/50">
-        © 2026 Sehaty Virtual Clinic. Licensed telehealth provider. Payments secured via mada, Visa & Mastercard.
+        © 2026 Health Care Virtual Clinic. Licensed telehealth provider. Payments secured via mada, Visa & Mastercard.
       </div>
     </footer>
   );

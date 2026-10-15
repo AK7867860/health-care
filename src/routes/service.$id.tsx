@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
+import { ServiceImage } from "@/components/service-image";
 import { ServiceIcon } from "@/components/service-icon";
 import { getService, services, slots, formatSar } from "@/lib/data";
 import { ArrowLeft, ArrowRight, Clock3, CalendarCheck, ShieldCheck, Video } from "lucide-react";
@@ -13,9 +14,9 @@ export const Route = createFileRoute("/service/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.service.name ?? "Service"} — Sehaty Virtual Clinic` },
+      { title: `${loaderData?.service.name ?? "Service"} — Health Care Virtual Clinic` },
       { name: "description", content: loaderData?.service.description ?? "" },
-      { property: "og:title", content: `${loaderData?.service.name ?? "Service"} — Sehaty` },
+      { property: "og:title", content: `${loaderData?.service.name ?? "Service"} — Health Care` },
       { property: "og:description", content: loaderData?.service.tagline ?? "" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -121,7 +122,7 @@ function ServiceDetail() {
                 params={{ id: s.slug }}
                 className="rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <ServiceIcon icon={s.icon} className="h-5 w-5 text-accent" />
+                <ServiceImage id={s.id} name={s.name} />
                 <p className="mt-3 font-display font-semibold">{s.name}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{formatSar(s.priceSar)} · {s.durationMin} min</p>
               </Link>

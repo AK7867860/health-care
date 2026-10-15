@@ -6,10 +6,10 @@ import { Award, HeartHandshake, ShieldCheck, Stethoscope, ArrowRight } from "luc
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sehaty Virtual Clinic" },
-      { name: "description", content: "Meet the provider behind Sehaty — a licensed, single-provider virtual clinic delivering personalized telehealth care across Saudi Arabia." },
-      { property: "og:title", content: "About — Sehaty Virtual Clinic" },
-      { property: "og:description", content: "A licensed single-provider virtual clinic in Saudi Arabia." },
+      { title: "About — Health Care Virtual Clinic" },
+      { name: "description", content: "Learn about Health Care and personalized online consultations across Saudi Arabia." },
+      { property: "og:title", content: "About — Health Care Virtual Clinic" },
+      { property: "og:description", content: "Personalized online consultation services in Saudi Arabia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { icon: HeartHandshake, title: "One provider, real continuity", text: "You see the same clinician every visit — someone who knows your history, not a rotating marketplace of strangers." },
+  { icon: HeartHandshake, title: "Consultations with continuity", text: "Your consultations build on your health history, goals, and previous follow-ups for a consistent care journey." },
   { icon: ShieldCheck, title: "Privacy by design", text: "Consultations are confidential, payment data is never stored on our servers, and records are retained per Saudi healthcare guidelines." },
   { icon: Award, title: "Evidence-based care", text: "Every program — from diabetes remission to sleep support — follows current clinical guidelines and measurable outcomes." },
 ];
@@ -31,9 +31,9 @@ function About() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h1 className="font-display text-4xl font-bold text-primary-foreground">Care that knows your name</h1>
           <p className="mt-3 max-w-2xl text-primary-foreground/70">
-            Sehaty is a single-provider virtual clinic. That means every consultation,
-            follow-up, and program is delivered by the same licensed clinician —
-            building a real relationship over time.
+            Health Care brings personalized consultations, follow-ups, and wellness
+            programs together — supporting your health journey from the comfort
+            of your home.
           </p>
         </div>
       </section>
@@ -43,17 +43,17 @@ function About() {
           <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
             <Stethoscope className="h-7 w-7" />
           </span>
-          <h2 className="mt-6 font-display text-2xl font-bold">Dr. A. Khalid, MD</h2>
-          <p className="mt-1 text-sm font-medium text-accent">Founder & Consulting Physician</p>
+          <h2 className="mt-6 font-display text-2xl font-bold">Your consultation, one step away</h2>
+          <p className="mt-1 text-sm font-medium text-accent">Personalized support for your wellbeing</p>
           <p className="mt-4 leading-relaxed text-primary-foreground/75">
-            With over 15 years in family and lifestyle medicine, Dr. Khalid founded
-            Sehaty to make continuous, personalized care accessible anywhere in the
-            Kingdom — without waiting rooms or travel.
+            Health Care makes continuous, personalized consultations accessible
+            anywhere in the Kingdom — with support for your nutrition, lifestyle,
+            and wellbeing, without waiting rooms or travel.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4 border-t border-primary-foreground/15 pt-6 text-center">
-            <div><p className="font-display text-2xl font-bold text-accent">15+</p><p className="text-xs text-primary-foreground/60">Years of practice</p></div>
+            <div><p className="font-display text-2xl font-bold text-accent">Online</p><p className="text-xs text-primary-foreground/60">Consultations</p></div>
             <div><p className="font-display text-2xl font-bold text-accent">14</p><p className="text-xs text-primary-foreground/60">Specializations</p></div>
-            <div><p className="font-display text-2xl font-bold text-accent">500+</p><p className="text-xs text-primary-foreground/60">Consultations / year</p></div>
+            <div><p className="font-display text-2xl font-bold text-accent">Private</p><p className="text-xs text-primary-foreground/60">Support</p></div>
           </div>
         </div>
 

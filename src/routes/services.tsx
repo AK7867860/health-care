@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
-import { ServiceIcon } from "@/components/service-icon";
+import { ServiceImage } from "@/components/service-image";
 import { services, formatSar, type Service } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
@@ -9,9 +9,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Sehaty Virtual Clinic" },
+      { title: "Services — Health Care Virtual Clinic" },
       { name: "description", content: "Explore 14 telehealth consultation services: nutrition, exercise, sleep, stress, mental health, weight loss, diabetes remission, children & elderly care, and more." },
-      { property: "og:title", content: "Services — Sehaty Virtual Clinic" },
+      { property: "og:title", content: "Services — Health Care Virtual Clinic" },
       { property: "og:description", content: "14 specialized online consultations with transparent SAR pricing." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,10 +29,8 @@ function ServiceCard({ s }: { s: Service }) {
       params={{ id: s.slug }}
       className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5"
     >
-      <div className="flex items-start justify-between">
-        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mint text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-          <ServiceIcon icon={s.icon} className="h-6 w-6" />
-        </span>
+      <ServiceImage id={s.id} name={s.name} />
+      <div className="mt-4 flex items-start justify-between">
         <span className="rounded-full bg-secondary px-2.5 py-1 text-xs font-semibold text-secondary-foreground">{s.category}</span>
       </div>
       <h3 className="mt-4 font-display text-lg font-semibold">{s.name}</h3>

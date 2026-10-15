@@ -5,9 +5,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — Sehaty Virtual Clinic" },
-      { name: "description", content: "Sign in or create your Sehaty patient account to book consultations and manage appointments." },
-      { property: "og:title", content: "Sign in — Sehaty Virtual Clinic" },
+      { title: "Sign in — Health Care Virtual Clinic" },
+      { name: "description", content: "Sign in or create your Health Care patient account to book consultations and manage appointments." },
+      { property: "og:title", content: "Sign in — Health Care Virtual Clinic" },
       { property: "og:description", content: "Access your patient portal." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +32,7 @@ function Auth() {
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-accent-foreground">
               <Stethoscope className="h-5 w-5" />
             </span>
-            <span className="font-display text-lg font-bold text-primary-foreground">Sehaty<span className="text-accent">.</span></span>
+            <span className="font-display text-lg font-bold text-primary-foreground">Health Care<span className="text-accent">.</span></span>
           </Link>
           <div>
             <h1 className="font-display text-4xl font-bold leading-tight text-primary-foreground">
@@ -54,7 +54,7 @@ function Auth() {
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
               <Stethoscope className="h-5 w-5" />
             </span>
-            <span className="font-display text-lg font-bold">Sehaty<span className="text-accent">.</span></span>
+            <span className="font-display text-lg font-bold">Health Care<span className="text-accent">.</span></span>
           </Link>
 
           <div className="grid grid-cols-2 gap-1 rounded-xl bg-secondary p-1">

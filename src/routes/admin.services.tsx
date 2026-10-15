@@ -7,9 +7,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/admin/services")({
   head: () => ({
     meta: [
-      { title: "Manage Services — Sehaty Admin" },
+      { title: "Manage Services — Health Care Admin" },
       { name: "description", content: "Create, edit, and toggle consultation services, pricing, and durations." },
-      { property: "og:title", content: "Manage Services — Sehaty Admin" },
+      { property: "og:title", content: "Manage Services — Health Care Admin" },
       { property: "og:description", content: "Admin service management." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

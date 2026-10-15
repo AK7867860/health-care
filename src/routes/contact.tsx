@@ -7,9 +7,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Sehaty Virtual Clinic" },
-      { name: "description", content: "Get in touch with Sehaty Virtual Clinic — questions about services, bookings, or payments. We reply within one business day." },
-      { property: "og:title", content: "Contact — Sehaty Virtual Clinic" },
+      { title: "Contact — Health Care Virtual Clinic" },
+      { name: "description", content: "Get in touch with Health Care Virtual Clinic — questions about services, bookings, or payments. We reply within one business day." },
+      { property: "og:title", content: "Contact — Health Care Virtual Clinic" },
       { property: "og:description", content: "Questions about services or bookings? Contact the clinic." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -39,7 +39,7 @@ function Contact() {
       <section className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-2">
           {[
-            { icon: Mail, t: "Email", d: "care@sehaty.example" },
+            { icon: Mail, t: "Email", d: "care@health-care.example" },
             { icon: Phone, t: "Phone / WhatsApp", d: "+966 5X XXX XXXX" },
             { icon: MapPin, t: "Location", d: "Riyadh, Saudi Arabia (virtual-first)" },
             { icon: Clock3, t: "Support hours", d: "Sun–Thu, 9:00–21:00 (GMT+3)" },

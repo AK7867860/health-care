@@ -4,9 +4,9 @@ import { CalendarClock, RefreshCw, Ban, Plus } from "lucide-react";
 export const Route = createFileRoute("/admin/slots")({
   head: () => ({
     meta: [
-      { title: "Availability — Sehaty Admin" },
+      { title: "Availability — Health Care Admin" },
       { name: "description", content: "Manage weekly availability, buffers, and blockout periods synced with Calendly." },
-      { property: "og:title", content: "Availability — Sehaty Admin" },
+      { property: "og:title", content: "Availability — Health Care Admin" },
       { property: "og:description", content: "Admin scheduling." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

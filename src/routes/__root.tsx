@@ -78,9 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sehaty Virtual Clinic" },
+      { title: "Health Care Virtual Clinic" },
       { name: "description", content: "Telehealth consultations across 14 specializations in Saudi Arabia." },
-      { property: "og:title", content: "Sehaty Virtual Clinic" },
+      { property: "og:title", content: "Health Care Virtual Clinic" },
       { property: "og:description", content: "Telehealth consultations across 14 specializations in Saudi Arabia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -12,9 +12,9 @@ export const Route = createFileRoute("/checkout")({
   }),
   head: () => ({
     meta: [
-      { title: "Checkout — Sehaty Virtual Clinic" },
+      { title: "Checkout — Health Care Virtual Clinic" },
       { name: "description", content: "Confirm your slot and pay securely with mada, Visa, or Mastercard." },
-      { property: "og:title", content: "Checkout — Sehaty Virtual Clinic" },
+      { property: "og:title", content: "Checkout — Health Care Virtual Clinic" },
       { property: "og:description", content: "Secure booking checkout." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -48,7 +48,7 @@ function Checkout() {
           <div className="mt-8 w-full rounded-2xl border border-border bg-card p-6 text-left">
             <p className="text-sm font-semibold text-muted-foreground">Meeting link</p>
             <p className="mt-1 break-all rounded-lg bg-secondary px-3 py-2 font-mono text-sm text-primary">
-              https://meet.example.com/sehaty-1043
+              https://meet.example.com/health-care-1043
             </p>
           </div>
           <Link

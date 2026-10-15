@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
-import { ServiceIcon } from "@/components/service-icon";
+import { ServiceImage } from "@/components/service-image";
 import { services, formatSar } from "@/lib/data";
 import {
   ArrowRight, Video, CalendarCheck, CreditCard, BellRing,
@@ -11,9 +11,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sehaty — Virtual Clinic & Telehealth Consultations in Saudi Arabia" },
+      { title: "Health Care — Virtual Clinic & Telehealth Consultations in Saudi Arabia" },
       { name: "description", content: "Book online consultations across 14 health specializations — nutrition, sleep, mental health, diabetes remission and more. Secure mada/Visa payments, instant video links." },
-      { property: "og:title", content: "Sehaty — Virtual Clinic" },
+      { property: "og:title", content: "Health Care — Virtual Clinic" },
       { property: "og:description", content: "Specialist telehealth consultations from home. Book in minutes, pay securely, join by video." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,12 +45,12 @@ function Home() {
               <Sparkles className="h-3.5 w-3.5" /> Licensed telehealth · Saudi Arabia
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-              Your doctor, <span className="text-accent">one video call</span> away
+              Your consultation, <span className="text-accent">one step away</span>
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-primary-foreground/70">
               Personalized consultations across 14 health specializations — from
               nutrition and sleep to diabetes remission. Book in minutes, pay
-              securely, and meet your provider from home.
+              securely, and join your consultation from home.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -63,7 +63,7 @@ function Home() {
                 to="/about"
                 className="inline-flex items-center gap-2 rounded-xl border border-primary-foreground/20 px-6 py-3.5 font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
-                Meet your provider
+                About Health Care
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-primary-foreground/60">
@@ -145,9 +145,7 @@ function Home() {
                 params={{ id: s.slug }}
                 className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mint text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                  <ServiceIcon icon={s.icon} className="h-6 w-6" />
-                </span>
+                <ServiceImage id={s.id} name={s.name} />
                 <h3 className="mt-4 font-display text-lg font-semibold">{s.name}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{s.tagline}</p>
                 <div className="mt-4 flex items-center justify-between text-sm">

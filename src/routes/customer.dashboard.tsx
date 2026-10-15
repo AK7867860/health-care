@@ -8,9 +8,9 @@ import { Video, CalendarPlus, Clock3, BellRing } from "lucide-react";
 export const Route = createFileRoute("/customer/dashboard")({
   head: () => ({
     meta: [
-      { title: "My Dashboard — Sehaty Virtual Clinic" },
+      { title: "My Dashboard — Health Care Virtual Clinic" },
       { name: "description", content: "View your upcoming consultations, join video calls, and review your booking history." },
-      { property: "og:title", content: "My Dashboard — Sehaty" },
+      { property: "og:title", content: "My Dashboard — Health Care" },
       { property: "og:description", content: "Patient dashboard." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
